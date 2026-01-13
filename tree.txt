@@ -1,0 +1,79 @@
+.
+├── data
+│   ├── fixtures
+│   └── tasks
+│       └── seed_tasks.jsonl
+├── pyproject.toml
+├── README.md
+├── runs
+├── scripts
+│   ├── run_batch.sh
+│   └── run_one.sh
+├── src
+│   ├── agent_monitor_playground
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   └── __init__.cpython-314.pyc
+│   │   ├── agent
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-314.pyc
+│   │   │   │   ├── client.cpython-314.pyc
+│   │   │   │   └── loop.cpython-314.pyc
+│   │   │   ├── client.py
+│   │   │   ├── loop.py
+│   │   │   ├── prompts.py
+│   │   │   ├── tasks.py
+│   │   │   ├── tools.py
+│   │   │   └── types.py
+│   │   ├── cli.py
+│   │   ├── eval
+│   │   │   ├── __init__.py
+│   │   │   ├── harness.py
+│   │   │   ├── metrics.py
+│   │   │   └── taskset.py
+│   │   ├── logging
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-314.pyc
+│   │   │   │   ├── events.cpython-314.pyc
+│   │   │   │   └── writer.cpython-314.pyc
+│   │   │   ├── events.py
+│   │   │   ├── replay.py
+│   │   │   └── writer.py
+│   │   ├── monitors
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-314.pyc
+│   │   │   │   ├── base.cpython-314.pyc
+│   │   │   │   ├── llm_judges.cpython-314.pyc
+│   │   │   │   └── rules.cpython-314.pyc
+│   │   │   ├── base.py
+│   │   │   ├── failure_modes.py
+│   │   │   ├── llm_judges.py
+│   │   │   └── rules.py
+│   │   ├── report
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-314.pyc
+│   │   │   │   └── schema.cpython-314.pyc
+│   │   │   ├── render.py
+│   │   │   └── schema.py
+│   │   └── storage
+│   │       ├── __init__.py
+│   │       ├── db.py
+│   │       └── models.py
+│   └── agent_monitor_playground.egg-info
+│       ├── dependency_links.txt
+│       ├── PKG-INFO
+│       ├── requires.txt
+│       ├── SOURCES.txt
+│       └── top_level.txt
+├── tests
+│   ├── test_monitors.py
+│   └── test_smoke.py
+├── tree.txt
+└── ui
+    └── streamlit_app.py
+
+22 directories, 55 files
