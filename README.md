@@ -2,14 +2,14 @@
 
 By [Mo Shehu](mailto:mo@shehudev.com)
 
-A small playground for running an AI agent, applying safety monitors and LLM judges, and generating risk reports.
+A minimal prototype of an output-level monitoring system for large language models. It demonstrates how raw model outputs can be evaluated using multiple independent monitors and converted into a structured safety and alignment risk report.
 
 Each run:
-1. Executes an agent.
-2. Applies multiple monitors.
-3. Builds a risk report.
-4. Writes everything to disk.
-5. Can be viewed in UI or CLI.
+1. Generates a model output from a prompt.
+2. Applies multiple independent monitors to that output.
+3. Aggregates their results into a structured RiskReport.
+4. Persists logs and reports.
+5. Exposes results via CLI and UI.
 
 ---
 
@@ -83,7 +83,18 @@ RiskReport → UI / CLI
 }
 ```
 
+## Current monitors
+
+Implemented monitors include:
+- Instruction-following judge (LLM-based)
+- Output validity and non-emptiness
+- Harmful pattern detection (static rules, e.g. destructive CLI commands)
+- Toy rule monitors for testing ensemble behavior
+
 ## Monitor report schema
+
+Risk reports are emitted as structured JSON to make them machine-consumable for downstream alerting, dashboards, or evaluation pipelines.
+
 ```
 {
   "monitor_id": "instruction-following-judge",
@@ -92,3 +103,4 @@ RiskReport → UI / CLI
   "explanation": "..."
 }
 ```
+
